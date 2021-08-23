@@ -16,6 +16,10 @@
 		C5158F6626D3431500767DAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5158F6526D3431500767DAB /* main.m */; };
 		C5158F7026D3431500767DAB /* WeakAssociateObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5158F6F26D3431500767DAB /* WeakAssociateObjectTests.m */; };
 		C5158F7B26D3431500767DAB /* WeakAssociateObjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5158F7A26D3431500767DAB /* WeakAssociateObjectUITests.m */; };
+		C5158F8A26D3438600767DAB /* LCWeakAssociateObjectContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5158F8926D3438600767DAB /* LCWeakAssociateObjectContainer.m */; };
+		C5158F8E26D3453400767DAB /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C5158F8D26D3453400767DAB /* Person.m */; };
+		C5158F9126D3454F00767DAB /* Person+WeakTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C5158F9026D3454F00767DAB /* Person+WeakTest.m */; };
+		C5158F9426D34C5B00767DAB /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5158F9326D34C5B00767DAB /* PushViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,14 @@
 		C5158F7626D3431500767DAB /* WeakAssociateObjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeakAssociateObjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5158F7A26D3431500767DAB /* WeakAssociateObjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakAssociateObjectUITests.m; sourceTree = "<group>"; };
 		C5158F7C26D3431500767DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5158F8826D3438600767DAB /* LCWeakAssociateObjectContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCWeakAssociateObjectContainer.h; sourceTree = "<group>"; };
+		C5158F8926D3438600767DAB /* LCWeakAssociateObjectContainer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCWeakAssociateObjectContainer.m; sourceTree = "<group>"; };
+		C5158F8C26D3453400767DAB /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		C5158F8D26D3453400767DAB /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		C5158F8F26D3454F00767DAB /* Person+WeakTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+WeakTest.h"; sourceTree = "<group>"; };
+		C5158F9026D3454F00767DAB /* Person+WeakTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+WeakTest.m"; sourceTree = "<group>"; };
+		C5158F9226D34C5B00767DAB /* PushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
+		C5158F9326D34C5B00767DAB /* PushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +116,15 @@
 		C5158F5226D3431400767DAB /* WeakAssociateObject */ = {
 			isa = PBXGroup;
 			children = (
+				C5158F8B26D3438D00767DAB /* Weak_Associated */,
 				C5158F5326D3431400767DAB /* AppDelegate.h */,
 				C5158F5426D3431400767DAB /* AppDelegate.m */,
 				C5158F5626D3431400767DAB /* SceneDelegate.h */,
 				C5158F5726D3431400767DAB /* SceneDelegate.m */,
 				C5158F5926D3431400767DAB /* ViewController.h */,
 				C5158F5A26D3431400767DAB /* ViewController.m */,
+				C5158F9226D34C5B00767DAB /* PushViewController.h */,
+				C5158F9326D34C5B00767DAB /* PushViewController.m */,
 				C5158F5C26D3431400767DAB /* Main.storyboard */,
 				C5158F5F26D3431500767DAB /* Assets.xcassets */,
 				C5158F6126D3431500767DAB /* LaunchScreen.storyboard */,
@@ -135,6 +150,19 @@
 				C5158F7C26D3431500767DAB /* Info.plist */,
 			);
 			path = WeakAssociateObjectUITests;
+			sourceTree = "<group>";
+		};
+		C5158F8B26D3438D00767DAB /* Weak_Associated */ = {
+			isa = PBXGroup;
+			children = (
+				C5158F8826D3438600767DAB /* LCWeakAssociateObjectContainer.h */,
+				C5158F8926D3438600767DAB /* LCWeakAssociateObjectContainer.m */,
+				C5158F8C26D3453400767DAB /* Person.h */,
+				C5158F8D26D3453400767DAB /* Person.m */,
+				C5158F8F26D3454F00767DAB /* Person+WeakTest.h */,
+				C5158F9026D3454F00767DAB /* Person+WeakTest.m */,
+			);
+			path = Weak_Associated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,9 +294,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5158F9126D3454F00767DAB /* Person+WeakTest.m in Sources */,
+				C5158F8E26D3453400767DAB /* Person.m in Sources */,
 				C5158F5B26D3431400767DAB /* ViewController.m in Sources */,
 				C5158F5526D3431400767DAB /* AppDelegate.m in Sources */,
 				C5158F6626D3431500767DAB /* main.m in Sources */,
+				C5158F8A26D3438600767DAB /* LCWeakAssociateObjectContainer.m in Sources */,
+				C5158F9426D34C5B00767DAB /* PushViewController.m in Sources */,
 				C5158F5826D3431400767DAB /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,14 +473,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = DB3H2942PY;
 				INFOPLIST_FILE = WeakAssociateObject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = chao.WeakAssociateObject;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.mujipassport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = mujipassport;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -458,14 +493,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = DB3H2942PY;
 				INFOPLIST_FILE = WeakAssociateObject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = chao.WeakAssociateObject;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.mujipassport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = mujipassport;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
